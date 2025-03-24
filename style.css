@@ -1,0 +1,53 @@
+.game {
+    border: solid black 2px;
+    height: 60vh;
+    width: 100%;
+    margin: auto;
+    position: relative; /* Ensures #t-rex is positioned correctly */
+    overflow: hidden;
+}
+
+#t-rex {
+    background-image: url('/trex.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 65px;
+    width: 65px;
+    position: absolute;
+    top: 560px; /* Starting position */
+    left: 30px;
+}
+
+.jump {
+    animation: jump 0.6s linear;
+}
+
+@keyframes jump {
+    0% { top: 560px; }
+    30% { top: 540px; }
+    50% { top: 400px; } /* Adjusted jump height */
+    80% { top: 400px; }
+    100% { top: 563px; } /* Lands back */
+}
+
+#cactus{
+    background-image: url('/cactus.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 39px;
+    left: 1990px;
+    top: 560px;
+    position: absolute;
+    animation: block 4s infinite linear ;
+
+} 
+
+@keyframes block{
+    0%{
+        left: 1990px;
+    }
+    100%{
+        left: -70px;
+    }
+} 
